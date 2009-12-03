@@ -4,7 +4,7 @@
   <groupId>net.necomimi</groupId>
   <artifactId>maven-parent</artifactId>
   <packaging>pom</packaging>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>1.0</version>
   <name>maven-parent</name>
   <description>necomimi.net maven parent setting project.</description>
   <url>http://maven.apache.org</url>
@@ -13,20 +13,27 @@
   	<url>http://necomimi.net/</url>
   </organization>
   <properties>
-    <v.junit.junit></v.junit.junit>
-    <v.maven-antrun-plugin></v.maven-antrun-plugin>
-    <v.maven-assembly-plugin></v.maven-assembly-plugin>
-    <v.maven-clean-plugin></v.maven-clean-plugin>
-    <v.maven-compiler-plugin></v.maven-compiler-plugin>
+    <v.junit.junit>3.8.1</v.junit.junit>
+    <v.maven-antrun-plugin>1.3</v.maven-antrun-plugin>
+    <v.maven-assembly-plugin>2.2-beta-4</v.maven-assembly-plugin>
+    <v.maven-clean-plugin>2.3</v.maven-clean-plugin>
+    <v.maven-compiler-plugin>2.0.2</v.maven-compiler-plugin>
+    <v.maven-dependency-plugin>2.0</v.maven-dependency-plugin>
+    <v.maven-deploy-plugin>2.4</v.maven-deploy-plugin>
+    <v.maven-ear-plugin>2.3.1</v.maven-ear-plugin>
+    <v.maven-ejb-plugin>2.1</v.maven-ejb-plugin>
+    <v.maven-install-plugin>2.3</v.maven-install-plugin>
+    <v.maven-jar-plugin>2.2</v.maven-jar-plugin>
+    <v.maven-javadoc-plugin>2.5</v.maven-javadoc-plugin>
+    <v.maven-plugin-plugin>2.5.1</v.maven-plugin-plugin>
+    <v.maven-rar-plugin>2.2</v.maven-rar-plugin>
+    <v.maven-release-plugin>2.0-beta-9</v.maven-release-plugin>
+    <v.maven-resources-plugin>2.4.1</v.maven-resources-plugin>
+    <v.maven-site-plugin>2.0.1</v.maven-site-plugin>
+    <v.maven-source-plugin>2.0.4</v.maven-source-plugin>
+    <v.maven-surefire-plugin>2.4.3</v.maven-surefire-plugin>
+    <v.maven-war-plugin>2.1-alpha-1</v.maven-war-plugin>
   </properties>
-  <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
-    </dependency>
-  </dependencies>
   <build>
     <sourceDirectory>src/main/java</sourceDirectory>
     <scriptSourceDirectory>src/main/scripts</scriptSourceDirectory>
@@ -44,91 +51,75 @@
       </testResource>
     </testResources>
     <directory>target</directory>
-    <finalName>maven-parent-0.0.1-SNAPSHOT</finalName>
+    <finalName>${project.artifactId}-{project.version}</finalName>
     <pluginManagement>
       <plugins>
         <plugin>
           <artifactId>maven-antrun-plugin</artifactId>
-          <version>1.3</version>
+          <version>${v.maven-antrun-plugin}</version>
         </plugin>
         <plugin>
           <artifactId>maven-assembly-plugin</artifactId>
-          <version>2.2-beta-4</version>
+          <version>${v.maven-assembly-plugin}</version>
         </plugin>
         <plugin>
           <artifactId>maven-clean-plugin</artifactId>
-          <version>2.3</version>
+          <version>${v.maven-clean-plugin}</version>
         </plugin>
         <plugin>
           <artifactId>maven-compiler-plugin</artifactId>
-          <version>2.0.2</version>
+          <version>${v.maven-compiler-plugin}</version>
         </plugin>
         <plugin>
           <artifactId>maven-dependency-plugin</artifactId>
-          <version>2.0</version>
+          <version>${v.maven-dependency-plugin}</version>
         </plugin>
         <plugin>
           <artifactId>maven-deploy-plugin</artifactId>
-          <version>2.4</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-ear-plugin</artifactId>
-          <version>2.3.1</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-ejb-plugin</artifactId>
-          <version>2.1</version>
+          <version>${v.maven-deploy-plugin}</version>
         </plugin>
         <plugin>
           <artifactId>maven-install-plugin</artifactId>
-          <version>2.3</version>
+          <version>${v.maven-install-plugin}</version>
         </plugin>
         <plugin>
           <artifactId>maven-jar-plugin</artifactId>
-          <version>2.2</version>
+          <version>${v.maven-jar-plugin}</version>
         </plugin>
         <plugin>
           <artifactId>maven-javadoc-plugin</artifactId>
-          <version>2.5</version>
+          <version>${v.maven-javadoc-plugin}</version>
         </plugin>
         <plugin>
           <artifactId>maven-plugin-plugin</artifactId>
-          <version>2.5.1</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-rar-plugin</artifactId>
-          <version>2.2</version>
+          <version>${v.maven-plugin-plugin}</version>
         </plugin>
         <plugin>
           <artifactId>maven-release-plugin</artifactId>
-          <version>2.0-beta-9</version>
+          <version>${v.maven-release-plugin}</version>
         </plugin>
         <plugin>
           <artifactId>maven-resources-plugin</artifactId>
-          <version>2.4.1</version>
+          <version>${v.maven-resources-plugin}</version>
         </plugin>
         <plugin>
           <artifactId>maven-site-plugin</artifactId>
-          <version>2.0.1</version>
+          <version>${v.maven-site-plugin}</version>
         </plugin>
         <plugin>
           <artifactId>maven-source-plugin</artifactId>
-          <version>2.0.4</version>
+          <version>${v.maven-source-plugin}</version>
         </plugin>
         <plugin>
           <artifactId>maven-surefire-plugin</artifactId>
-          <version>2.4.3</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-war-plugin</artifactId>
-          <version>2.1-alpha-1</version>
+          <version>${v.maven-surefire-plugin}</version>
         </plugin>
       </plugins>
     </pluginManagement>
     <plugins>
       <plugin>
         <artifactId>maven-deploy-plugin</artifactId>
-        <version>2.4</version>
+        <version>${v.maven-deploy-plugin}</version>
         <executions>
           <execution>
             <id>default-deploy</id>
@@ -141,7 +132,7 @@
       </plugin>
       <plugin>
         <artifactId>maven-install-plugin</artifactId>
-        <version>2.3</version>
+        <version>${v.maven-install-plugin}</version>
         <executions>
           <execution>
             <id>default-install</id>
@@ -154,7 +145,7 @@
       </plugin>
       <plugin>
         <artifactId>maven-clean-plugin</artifactId>
-        <version>2.3</version>
+        <version>${v.maven-clean-plugin}</version>
         <executions>
           <execution>
             <id>default-clean</id>
@@ -167,7 +158,7 @@
       </plugin>
       <plugin>
         <artifactId>maven-site-plugin</artifactId>
-        <version>2.0.1</version>
+        <version>${v.maven-site-plugin}</version>
         <executions>
           <execution>
             <id>default-site</id>
@@ -201,12 +192,32 @@
       <snapshots>
         <enabled>false</enabled>
       </snapshots>
+      <id>ibiblio</id>
+      <name>ibiblio Repository</name>
+      <url>http://mirrors.ibiblio.org/pub/mirrors/maven2/</url>
+    </repository>
+    <repository>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
       <id>central</id>
       <name>Maven Repository Switchboard</name>
       <url>http://repo1.maven.org/maven2</url>
     </repository>
   </repositories>
   <pluginRepositories>
+    <pluginRepository>
+      <releases>
+        <updatePolicy>never</updatePolicy>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+      <id>ibiblio</id>
+      <name>ibilio Repository</name>
+      <url>http://mirrors.ibiblio.org/pub/mirrors/maven2</url>
+      <layout>default</layout>
+    </pluginRepository>
     <pluginRepository>
       <releases>
         <updatePolicy>never</updatePolicy>
@@ -223,7 +234,7 @@
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>3.8.1</version>
+      <version>${v.junit.junit}</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
