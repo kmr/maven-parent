@@ -51,7 +51,7 @@
       </testResource>
     </testResources>
     <directory>target</directory>
-    <finalName>${project.artifactId}-{project.version}</finalName>
+    <finalName>${project.artifactId}-${project.version}</finalName>
     <pluginManagement>
       <plugins>
         <plugin>
