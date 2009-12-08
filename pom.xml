@@ -18,6 +18,7 @@
     <v.maven-assembly-plugin>2.2-beta-4</v.maven-assembly-plugin>
     <v.maven-clean-plugin>2.3</v.maven-clean-plugin>
     <v.maven-compiler-plugin>2.0.2</v.maven-compiler-plugin>
+    <v.maven-eclipse-plugin>2.7</v.maven-eclipse-plugin>
     <v.maven-dependency-plugin>2.0</v.maven-dependency-plugin>
     <v.maven-deploy-plugin>2.4</v.maven-deploy-plugin>
     <v.maven-ear-plugin>2.3.1</v.maven-ear-plugin>
@@ -69,6 +70,10 @@
         <plugin>
           <artifactId>maven-compiler-plugin</artifactId>
           <version>${v.maven-compiler-plugin}</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-eclipse-plugin</artifactId>
+          <version>${v.maven-eclipse-plugin}</version>
         </plugin>
         <plugin>
           <artifactId>maven-dependency-plugin</artifactId>
